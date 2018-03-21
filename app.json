@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/xymain/xymain",
+    "pages/xytextcat/xytextcat",
+    "pages/xyrecorder/xyrecorder",
+    "pages/xypicker/xypicker",
+    "pages/xytexttopic/xytexttopic",
+    "pages/xyvoice/xyvoice",
+    "pages/user/user",
+    "pages/xylogin/xylogin",
+    "pages/info/info",
+    "pages/xyopenid/xyopenid",
+    "pages/toplist/toplist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "方言土语家乡话",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "images/info_gray.png",
+        "selectedIconPath": "images/info.png",
+        "text": "信息"
+      },
+      {
+        "pagePath": "pages/xymain/xymain",
+        "iconPath": "images/home_gray.png",
+        "selectedIconPath": "images/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user_gray.png",
+        "selectedIconPath": "images/user.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "debug": true
+}

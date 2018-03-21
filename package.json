@@ -1,0 +1,13 @@
+{
+  "name": "qcloud-weapp-client-fangyan",
+  "version": "1.0.0",
+  "description": "方言土语家乡话",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "FYTeam",
+  "license": "MIT"
+}
