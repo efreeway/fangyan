@@ -1,0 +1,18 @@
+/* xytextcat.wxss */
+
+.wxSearchKeyList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wxSearchKeyItem{
+  flex: 0 0 20%;
+  font-size: 18px;
+
+  text-align: center;
+  border: 1px solid #345;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

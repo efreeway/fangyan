@@ -1,0 +1,23 @@
+<!--xyrecorder.wxml-->
+<view class="weui-cells__title">{{restext}}</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">{{TextForRecord.material}}</view>
+  </view>
+</view>
+<view class="weui-cells__title">录完了，可以试听一下，不满意重录！</view>
+<button class="btn-style" bindtap="testRec">{{playOrPause}}</button>
+<view class="weui-cells__title">录音效果满意，那就提交吧！</view>
+<button type="{{sub_type}}" class="btn-style" bindtap="submitRec">提交</button>
+
+
+<view wx:if="{{isSpeaking}}" class="speak-style">
+  <image class="sound-style" src="../../images/voice_icon_speech_sound_1.png"></image>
+  <image wx:if="{{j==2}}" class="sound-style" src="../../images/voice_icon_speech_sound_2.png"></image>
+  <image wx:if="{{j==3}}" class="sound-style" src="../../images/voice_icon_speech_sound_3.png"></image>
+  <image wx:if="{{j==4}}" class="sound-style" src="../../images/voice_icon_speech_sound_4.png"></image>
+  <image wx:if="{{j==5}}" class="sound-style" src="../../images/voice_icon_speech_sound_5.png"></image>
+</view>
+<view class="record-style">
+  <button type="{{rec_type}}" class="btn-style" bindtouchstart="touchdown" bindtouchend="touchup">按住 录音</button>
+</view>

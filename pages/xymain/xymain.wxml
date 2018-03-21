@@ -1,0 +1,100 @@
+<!--xymain.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="weui-cells__title">最近上传的录音资料在最上面。点击你想听的标题，就可以下载并播放录音。</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">录音标题</view>
+              <view class="weui-cell__ft">方言地区</view>
+            </view>
+            <view class="weui-cell" wx:for="{{voiceslist}}">
+              <view class="weui-cell__bd" bindtap="wxVoiceTap" data-index="{{index}}" data-key="{{item}}">{{item.topic}}</view>
+              <view class="weui-cell__ft" data-key="{{item}}">{{item.region}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-cells__title">这是大家选出来的比较好听的录音，你在听录音的时候，也可以打分哦！</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">录音标题</view>
+              <view class="weui-cell__ft">方言地区</view>
+            </view>
+            <view class="weui-cell" wx:for="{{bestlist}}">
+              <view class="weui-cell__bd" bindtap="wxVoiceTap" data-index="{{index}}" data-key="{{item}}">{{item.topic}}</view>
+              <view class="weui-cell__ft" data-key="{{item}}">{{item.region}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">搜文本内容：</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" bindinput="bindTextInput" placeholder="请输入搜索关键词！" />
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">搜方言地区：</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" bindinput="bindAreaInput" placeholder="请输入方言地，如：湖南" />
+            </view>
+          </view>
+          <button type="primary" bindtap="bindSearch"> 立即搜索 </button>
+          <view class="searchResults" hidden="{{searchTaped != 1}}">
+            <view class="weui-cells__title">以下为搜索结果，点击录音文本的标题，就可以下载并播放录音。</view>
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell">
+                <view class="weui-cell__bd">录音标题</view>
+                <view class="weui-cell__ft">方言地区</view>
+              </view>
+              <view class="weui-cell" wx:for="{{searchlist}}">
+                <view class="weui-cell__bd" bindtap="wxVoiceTap" data-index="{{index}}" data-key="{{item}}">{{item.topic}}</view>
+                <view class="weui-cell__ft" data-key="{{item}}">{{item.region}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">乡音最动听，请您说方言！</view>
+          </view>  
+          <view class="weui-cell">
+            <view class="weui-cell__bd">家乡话最亲，请您说方言！</view>
+          </view>  
+          <view class="weui-cell">
+            <view class="weui-cell__bd">乡音最流畅，请您说方言！</view>
+          </view>  
+          <view class="weui-cell">
+            <view class="weui-cell__bd">录音方法：选定您的家乡、选一个文本、进入录音界面，请用家乡方言朗读并录音、上传录音。</view>
+          </view>  
+          <view class="weui-cell">
+            <view class="weui-cell__bd">版权提示：您授权在此录制的声音资料用于方言的传播和研究。</view>
+          </view>  
+          <view class="weui-cell">
+            <view class="weui-cell__bd">现在先来设定您的家乡吧：</view>
+          </view>  
+          <button type="{{FYType}}" style="box-sizing:border-box;width:90%" bindtap="selectDistrict">方言设定</button>
+          <view hidden="{{textType != 'primary'}}">
+            <view class="weui-cells__title">下面请选择文本的种类和具体内容。</view>
+            <button type="{{textType}}" style="box-sizing:border-box;width:90%" bindtap="selectTextType">选择具体文本</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

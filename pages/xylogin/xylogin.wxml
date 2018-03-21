@@ -1,0 +1,19 @@
+<!--xylogin.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">欢迎光临</text>
+    <text class="page__desc">按钮</text>
+  </view>
+  <view class="page__bd">
+    <view class="btn-area" id="buttonContainer">
+      <view class="body-view">
+        <text>祖国地大物博、各地方言也是精彩纷呈，我们提供一个方言交流的平台。\n</text>
+        <text>欢迎来“方言土语家乡话”，说说您的家乡话！</text>
+      </view>
+      <view class="button-wrapper">
+        <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="doLogin"> 登录
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

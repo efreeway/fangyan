@@ -1,0 +1,14 @@
+<!--xytexttopic.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">选择文字片段</text>
+    <text class="page__desc">语料选择</text>
+  </view>
+  <view class="wxSearch">
+    <view class="weui-flex__item">
+      <block wx:for="{{textlist}}">
+        <view class="wxSearchKeyItem" bindtap="wxTopicTap" data-key="{{item}}">{{item.topic}}</view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+/* xyvoice.wxss */
+.btn-style{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,14 @@
+<!--xytextcat.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">选择你喜欢的类别</text>
+    <text class="page__desc">语料选择</text>
+  </view>
+  <view class="wxSearch">
+    <view class="weui-flex__item">
+      <block wx:for="{{dataThemes}}">
+        <view class="wxSearchKeyItem" bindtap="wxSearchKeyTap" data-key="{{item}}">{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+</view>

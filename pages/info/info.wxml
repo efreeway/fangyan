@@ -1,0 +1,21 @@
+<!--info.wxml-->
+<view class="page">
+  <view class="weui-cells__title">关于这个小程序：</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">这个小程序就是用来录制和交流全国各地的方言的，让我们一起来录下自己的方言，分享自己的方言吧！</view>
+    </view>
+  </view>
+  <view class="weui-cells__title">录音方法：</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">按照“我要录音”页面的指导，先选方言-->选择文本-->按住 录音，用您的方言朗读-->上传。上传之后，在“最新录音”页面下拉刷新一下，就能看到您上传的内容了。</view>
+    </view>
+  </view>
+  <view class="weui-cells__title">注意事项：</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">微信小程序目前规定录音最长1分钟，因此我们的资料大都在200字以内。你可以在60秒里面很轻松地读完。</view>
+    </view>
+  </view>
+</view>
